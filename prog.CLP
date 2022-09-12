@@ -244,6 +244,52 @@ CLIPS> (defrule Menu
 "4.)Greish green/olive brown" crlf crlf 
  " Your answer: ")
 (assert (iffoundChoice4 (read))))
+:;------------------R27-----------------------
+(defrule Tail_round27
+(iffoundChoice4 1)
+?retractChy <- (iffoundChoice4 1)
+(not (iffoundChoice5 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "ventrical Scales are..(1|2)" crlf crlf 
+"1.)Feebly imbricate or smooth" crlf crlf 
+"2.)Irreguler in shape and indistincs in shape than other body scales" crlf crlf 
+ " Your answer: ")
+(assert (iffoundChoice5 (read))))
+:;-----------------R28-------------------------
+(defrule Tail_round28
+(iffoundChoice5 1)
+?retractChy <- (iffoundChoice5 1)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a yellow sea snake" crlf crlf 
+:;-----------------R29-------------------------
+(defrule Tail_round29
+(iffoundChoice5 2)
+?retractChy <- (iffoundChoice5 2)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a yellow belly sea snake" crlf crlf 
+:;-----------------R30-------------------------
+(defrule Tail_round30
+(iffoundChoice4 2)
+?retractChy <- (iffoundChoice4 2)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a Striped sea snake" crlf crlf 
+:;-----------------R31-------------------------
+(defrule Tail_round31
+(iffoundChoice4 4)
+?retractChy <- (iffoundChoice4 4)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a Beak sea snake" crlf crlf 
+:;----------------R32--------------------------
+
+
+
+
+
 
 
 
