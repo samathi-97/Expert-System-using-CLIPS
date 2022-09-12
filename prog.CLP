@@ -135,12 +135,12 @@ CLIPS> (defrule Menu
 (not (ifYesNochoise7 ?))
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Number of white bands in the body (One|Two)"crlf crlf  " Your answer: " )
+(printout t crlf crlf crlf "Number of white bands in the body (one|Two)"crlf crlf  " Your answer: " )
  (assert (ifYesNochoise7 (read))))
  :;----------------R15-------------------
 (defrule Tail_round15
-(ifYesNochoise7 One)
-?retractChy <- (ifYesNochoise7 One)
+(ifYesNochoise7 one)
+?retractChy <- (ifYesNochoise7 one)
 =>
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a Sri Lankan Krait , Highly venomous !!!"crlf crlf )) 
@@ -151,7 +151,7 @@ CLIPS> (defrule Menu
 =>
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a Common Lankan Krait , Highly venomous !!!"crlf crlf )) 
------------------R17---------------------
+:;-----------------R17---------------------
 (defrule Tail_round17
 (iffoundChoice1 1)
 ?retractChy <- (iffoundChoice1 1)
@@ -159,7 +159,7 @@ CLIPS> (defrule Menu
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a Merrem's Hump-nosed viper , Highly venomous !!!"crlf crlf )
 )
------------------R18---------------------
+:;-----------------R18---------------------
 (defrule Tail_round18
 (iffoundChoice1 1)
 ?retractChy <- (iffoundChoice1 2)
@@ -167,7 +167,7 @@ CLIPS> (defrule Menu
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a Millard's Hump-nosed viper , Highly venomous !!!"crlf crlf )
 )
------------------R19---------------------
+:;-----------------R19---------------------
 (defrule Tail_round19
 (iffoundChoice1 1)
 ?retractChy <- (iffoundChoice1 3)
@@ -175,7 +175,7 @@ CLIPS> (defrule Menu
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a Lowland's Hump-nosed viper , Highly venomous !!!"crlf crlf )
 )
-----------------R20---------------------
+:;----------------R20---------------------
 (defrule Tail_round20
 (iffoundChoice 2)
 ?retractChy <- (iffoundChoice 2)
@@ -183,9 +183,9 @@ CLIPS> (defrule Menu
 =>
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a sea snake, Highly venomous !!!"crlf crlf 
-"Head and Neck is (distinct|not Distinct)"crlf crlf  " Your answer: ")
+"Head and Neck is (distinct|not)"crlf crlf  " Your answer: ")
 (assert (ifYesNochoise8 (read))))
-----------------R21---------------------
+:;----------------R21---------------------
 (defrule Tail_round21
 (ifYesNochoise8 distinct)
 ?retractChy <- (ifYesNochoise8 distinct)
@@ -197,14 +197,14 @@ CLIPS> (defrule Menu
 "2.)greyish colour" crlf crlf 
  " Your answer: ")
 (assert (iffoundChoice2 (read))))
-----------------R22----------------------
+:;----------------R22----------------------
 (defrule Tail_round22
 (iffoundChoice2 2)
  ?retractChy <- (iffoundChoice2 2)
  =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Jerdon's sea snake, Highly venomous !!!)
-----------------R23----------------------
+(printout t crlf crlf crlf "Thats probably a Slender sea snake, Highly venomous !!!"))
+:;----------------R23----------------------
 (defrule Tail_round23
 (iffoundChoice2 1)
  ?retractChy <- (iffoundChoice2 1)
@@ -216,5 +216,35 @@ CLIPS> (defrule Menu
 "2.)Black Dorsal spots" crlf crlf 
  " Your answer: ")
 (assert (iffoundChoice3 (read))))
+:;------------------R24----------------------
+(defrule Tail_round24
+(iffoundChoice3 1)
+?retractChy <- (iffoundChoice3 1)
+ =>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a Annulated sea snake, Highly venomous !!!"))
+:;------------------R25----------------------
+(defrule Tail_round25
+(iffoundChoice3 2)
+?retractChy <- (iffoundChoice3 2)
+ =>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a Jerdon's sea snake, Highly venomous !!!"))
+:;------------------R26-----------------------
+(defrule Tail_round26
+(ifYesNochoise8 not)
+?retractChy <- (ifYesNochoise8 not)
+(not (iffoundChoice4 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Body colour is(1|2|3|4)" crlf crlf 
+"1.)yellow colour" crlf crlf 
+"2.)Shiny black/dark olive" crlf crlf 
+"3.)Cream white - pale grey" crlf crlf 
+"4.)Greish green/olive brown" crlf crlf 
+ " Your answer: ")
+(assert (iffoundChoice4 (read))))
+
+
 
 
