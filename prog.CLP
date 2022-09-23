@@ -295,7 +295,7 @@ CLIPS> (defrule Menu
  " Your answer: ")
 (assert (iffoundChoice6 (read))))
 :;-----------------R33-------------------------
-(defrule Tail_round31
+(defrule Tail_round33
 (iffoundChoice6 yes)
 ?retractChy <- (iffoundChoice6 yes)
 =>
@@ -319,7 +319,7 @@ defrule Tail_round35
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a Oronte sea snake" crlf crlf 
 :;----------------R36-------------------------
-defrule Tail_round35
+defrule Tail_round36
 (iffoundChoice7 cream)
 ?retractChy <- (iffoundChoice7 cream)
 =>
