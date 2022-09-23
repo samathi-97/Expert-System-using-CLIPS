@@ -285,7 +285,46 @@ CLIPS> (defrule Menu
 (retract ?retractChy)
 (printout t crlf crlf crlf "Thats probably a Beak sea snake" crlf crlf 
 :;----------------R32--------------------------
-
+(defrule Tail_round32
+(iffoundChoice4 3)
+?retractChy <- (iffoundChoice4 3)
+(not (iffoundChoice6 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Have spike like scales..(yes|no)" crlf crlf 
+ " Your answer: ")
+(assert (iffoundChoice6 (read))))
+:;-----------------R33-------------------------
+(defrule Tail_round31
+(iffoundChoice6 yes)
+?retractChy <- (iffoundChoice6 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a Arabian Gulf sea snake" crlf crlf 
+:;------------------R34------------------------
+(defrule Tail_round34
+(iffoundChoice6 no)
+?retractChy <- (iffoundChoice6 no)
+(not (iffoundChoice7 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Colour of Belly region is..(white|cream)" crlf crlf 
+ " Your answer: ")
+(assert (iffoundChoice7 (read))))
+:;----------------R35-------------------------
+defrule Tail_round35
+(iffoundChoice7 white)
+?retractChy <- (iffoundChoice7 white)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a Oronte sea snake" crlf crlf 
+:;----------------R36-------------------------
+defrule Tail_round35
+(iffoundChoice7 cream)
+?retractChy <- (iffoundChoice7 cream)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Thats probably a Viperine sea snake" crlf crlf 
 
 
 
