@@ -5,7 +5,6 @@ CLIPS> (defrule Menu
 "The snake found has a " crlf crlf 
 "1.)Tail round, tapering to a point or blunt" crlf crlf 
 "2.)Tail flattened, paddle shaped,bite at sea or estuary" crlf crlf
-"3.)EXIT SYSTEM"crlf crlf crlf
 " Enter your choise here (1|2|3): " )
 (assert (iffoundChoice (read))))
 :; Rule Tail round, tapering to a point or blunt
@@ -187,8 +186,8 @@ CLIPS> (defrule Menu
 (assert (ifYesNochoise8 (read))))
 :;----------------R21---------------------
 (defrule Tail_round21
-(ifYesNochoise8 distinct)
-?retractChy <- (ifYesNochoise8 distinct)
+(ifYesNochoise8 not)
+?retractChy <- (ifYesNochoise8 not)
 (not (iffoundChoice2 ?))
 =>
 (retract ?retractChy)
@@ -232,8 +231,8 @@ CLIPS> (defrule Menu
 (printout t crlf crlf crlf "Thats probably a Jerdon's sea snake, Highly venomous !!!"))
 :;------------------R26-----------------------
 (defrule Tail_round26
-(ifYesNochoise8 not)
-?retractChy <- (ifYesNochoise8 not)
+(ifYesNochoise8 distinct)
+?retractChy <- (ifYesNochoise8 distinct)
 (not (iffoundChoice4 ?))
 =>
 (retract ?retractChy)
@@ -262,28 +261,28 @@ CLIPS> (defrule Menu
 ?retractChy <- (iffoundChoice5 1)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a yellow sea snake" crlf crlf 
+(printout t crlf crlf crlf "Thats probably a yellow sea snake" crlf crlf ))
 :;-----------------R29-------------------------
 (defrule Tail_round29
 (iffoundChoice5 2)
 ?retractChy <- (iffoundChoice5 2)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a yellow belly sea snake" crlf crlf 
+(printout t crlf crlf crlf "Thats probably a yellow belly sea snake" crlf crlf ))
 :;-----------------R30-------------------------
 (defrule Tail_round30
 (iffoundChoice4 2)
 ?retractChy <- (iffoundChoice4 2)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Striped sea snake" crlf crlf 
+(printout t crlf crlf crlf "Thats probably a Striped sea snake" crlf crlf ))
 :;-----------------R31-------------------------
 (defrule Tail_round31
 (iffoundChoice4 4)
 ?retractChy <- (iffoundChoice4 4)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Beak sea snake" crlf crlf 
+(printout t crlf crlf crlf "Thats probably a Beak sea snake" crlf crlf ))
 :;----------------R32--------------------------
 (defrule Tail_round32
 (iffoundChoice4 3)
@@ -300,7 +299,7 @@ CLIPS> (defrule Menu
 ?retractChy <- (iffoundChoice6 yes)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Arabian Gulf sea snake" crlf crlf 
+(printout t crlf crlf crlf "Thats probably a Arabian Gulf sea snake" crlf crlf ))
 :;------------------R34------------------------
 (defrule Tail_round34
 (iffoundChoice6 no)
@@ -312,19 +311,19 @@ CLIPS> (defrule Menu
  " Your answer: ")
 (assert (iffoundChoice7 (read))))
 :;----------------R35-------------------------
-defrule Tail_round35
+(defrule Tail_round35
 (iffoundChoice7 white)
 ?retractChy <- (iffoundChoice7 white)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Oronte sea snake" crlf crlf 
+(printout t crlf crlf crlf "Thats probably a Oronte sea snake" crlf crlf ))
 :;----------------R36-------------------------
-defrule Tail_round36
+(defrule Tail_round36
 (iffoundChoice7 cream)
 ?retractChy <- (iffoundChoice7 cream)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Viperine sea snake" crlf crlf 
+(printout t crlf crlf crlf "Thats probably a Viperine sea snake" crlf crlf ))
 
 
 
