@@ -1,4 +1,5 @@
          CLIPS (6.30 3/17/15)
+:; Snake Expert uding CLIPS
 CLIPS> (defrule Menu
  (not (iffoundChoice ?))
 => (printout t crlf crlf
