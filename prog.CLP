@@ -317,14 +317,14 @@ CLIPS> (defrule Menu
 ?retractChy <- (iffoundChoice7 white)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Oronte sea snake" crlf crlf ))
+(printout t crlf crlf crlf "Thats probably a Viperine sea snake" crlf crlf ))
 :;----------------R36-------------------------
 (defrule Tail_round36
 (iffoundChoice7 cream)
 ?retractChy <- (iffoundChoice7 cream)
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf "Thats probably a Viperine sea snake" crlf crlf ))
+(printout t crlf crlf crlf "Thats probably a Oronte sea snake" crlf crlf ))
 
 
 
